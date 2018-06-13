@@ -6,6 +6,20 @@
 from settings import arabic_num_map
 
 
+def analyse_format_string(source):
+    """分析挖掘前的字符串格式化"""
+    content = source.strip()
+    content = conv_q2b(source)
+    content = content.replace('（', '(').replace('）', ')')\
+        .replace('。', '. ')\
+        .replace('，', ',')\
+        .replace('“', '"')\
+        .replace('”', '"')\
+        .replace('；', ';')\
+        .replace('！', '!')
+    return content
+
+
 def conv_q2b(ustring):
     """全角转半角"""
     ss = []
