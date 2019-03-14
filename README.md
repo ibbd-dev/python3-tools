@@ -19,3 +19,14 @@ pip3 install git+https://github.com/ibbd-dev/python3-tools
 - conv_chinese_digits_to_arabic: 中文数字转化为阿拉伯数字
 - chinese_fuzzy_match: 中文模糊匹配，支持模糊拼音
 
+## 使用
+
+```python
+from ibbd_python3_tools.chinese_fuzzy_match import chinese_fuzzy_match
+
+string = '张三丰来了'
+match = '章叁风'
+print(chinese_fuzzy_match(match, string))
+```
+
+
