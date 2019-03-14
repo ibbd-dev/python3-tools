@@ -37,9 +37,9 @@ class MatchType(str, Enum):
 def chinese_fuzzy_match(match_string, string, use_fuzzy=True):
     """中文模糊匹配，支持拼音，支持模糊拼音
     从string中匹配match_string
-    搜狗支持的模糊音有：
-    1. 声母模糊音：s <--> sh，c<-->ch，z <-->zh，l<-->n，f<-->h，r<-->l，
-    2. 韵母模糊音：an<-->ang，en<-->eng，in<-->ing，ian<-->iang，uan<-->uang
+    支持的模糊音有：
+    1. 声母模糊音：s <--> sh，c<-->ch，z <-->zh
+    2. 韵母模糊音：an<-->ang，en<-->eng，in<-->ing
     Args:
         match_string: 需要匹配的字符串
         string: 被匹配的字符串
@@ -50,6 +50,10 @@ def chinese_fuzzy_match(match_string, string, use_fuzzy=True):
             pinyin: 拼音匹配
             fuzzy: 模糊拼音
             not_match: 没匹配上
+    Examples:
+        string = '张三丰来了'
+        match = '章叁风'
+        print(chinese_fuzzy_match(match, string))
     """
     res = {   # 返回格式
         'match_type': MatchType.NotMatch.value
