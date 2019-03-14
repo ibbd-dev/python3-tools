@@ -18,7 +18,7 @@ Python常用的相关工具库
 DEPENDENCIES = [
 ]
 
-VERSION = '0.5.0'
+VERSION = '0.5.1'
 URL = 'https://github.com/ibbd-dev/python3-tools'
 
 PACKAGE_NAME = 'ibbd_python3_tools'

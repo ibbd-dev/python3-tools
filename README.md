@@ -4,7 +4,11 @@ python3工具包
 ## install 
 
 ```sh
+# 源码安装
 python3 setup.py install
+
+# 使用pip安装
+pip3 install git+https://github.com/ibbd-dev/python3-tools
 ```
 
 ## 功能
